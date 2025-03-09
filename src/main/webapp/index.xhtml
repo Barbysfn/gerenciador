@@ -21,11 +21,8 @@
                 <h:inputTextarea id="descricao" value="#{tarefaMB.tarefa.descricao}" />
 
                 <h:outputLabel for="responsavel" value="Responsável:" />
-                <h:selectOneMenu id="responsavel" value="#{tarefaMB.tarefa.responsavel}">
-                    <f:selectItem itemValue="Fulano" itemLabel="Fulano" />
-                    <f:selectItem itemValue="Ciclano" itemLabel="Ciclano" />
-                    <f:selectItem itemValue="Beltrano" itemLabel="Beltrano" />
-                </h:selectOneMenu>
+                <h:inputTextarea id="responsavel" value="#{tarefaMB.tarefa.responsavel}">
+                </h:inputTextarea>
 
                 <h:outputLabel for="prioridade" value="Prioridade:" />
                 <h:selectOneMenu id="prioridade" value="#{tarefaMB.tarefa.prioridade}">
@@ -35,7 +32,10 @@
                 </h:selectOneMenu>
 
                 <h:outputLabel for="deadline" value="Deadline:" />
-                <h:inputText id="deadline" value="#{tarefaMB.tarefa.deadline}" />
+                <h:inputText id="deadline" value="#{tarefaMB.tarefa.deadline}">
+                    <f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Sao_Paulo" />
+                </h:inputText>
+
 
                 <h:commandButton value="Cadastrar" action="#{tarefaMB.salvar}" />
             </h:panelGrid>

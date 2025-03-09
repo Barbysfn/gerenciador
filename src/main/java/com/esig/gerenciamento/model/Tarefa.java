@@ -75,4 +75,5 @@ public class Tarefa implements Serializable {
     public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
+
 }

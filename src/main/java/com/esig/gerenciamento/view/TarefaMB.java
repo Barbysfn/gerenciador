@@ -6,6 +6,7 @@ import com.esig.gerenciamento.service.TarefaService;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import java.util.Date;
 import java.util.List;
 
 @ManagedBean
@@ -17,10 +18,19 @@ public class TarefaMB {
     private List<Tarefa> tarefas;
     private String filtroTitulo;
     private String filtroResponsavel;
+    private boolean mostrarLista = false;
 
     @PostConstruct
     public void init() {
         tarefas = service.listar();
+    }
+
+    public void mostrarLista() {
+        this.mostrarLista = true;
+    }
+
+    public void mostrarCadastro() {
+        this.mostrarLista = false;
     }
 
     public void salvar() {
@@ -50,8 +60,6 @@ public class TarefaMB {
             tarefas = service.listar();
         }
     }
-
-    // Getters and Setters
 
     public Tarefa getTarefa() {
         return tarefa;
@@ -83,5 +91,13 @@ public class TarefaMB {
 
     public void setFiltroResponsavel(String filtroResponsavel) {
         this.filtroResponsavel = filtroResponsavel;
+    }
+
+    public boolean isMostrarLista() {
+        return mostrarLista;
+    }
+
+    public void setMostrarLista(boolean mostrarLista) {
+        this.mostrarLista = mostrarLista;
     }
 }
