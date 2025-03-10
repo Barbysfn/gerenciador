@@ -4,8 +4,12 @@
 
 Este projeto tem como objetivo o desenvolvimento de um gerenciador de tarefas. A aplicação permite que os usuários criem, editem e excluam tarefas, além de gerenciar seu status de forma simples e eficiente. A solução foi construída utilizando Java, JSF, JPA (Java Persistence API), Hibernate e PostgreSQL.
 
+
+https://github.com/user-attachments/assets/38186089-8849-4e9d-a1d0-9b33b8752651
+
+
 -------------------------------------
-### ⚙️ **Pré-requisitos**  
+### ⚙️ **Pré-requisitos**
 Para rodar o projeto localmente, é necessário que as seguintes ferramentas estejam instaladas:
 
 - **Java**: Para compilar e rodar o código.
@@ -46,5 +50,6 @@ O que o Teste Verifica:
 ✅ **Os testes foram bem-sucedidos, validando os comportamentos esperados nas principais funcionalidades do TarefaService.**
 
 --------------------------------------
+
 
 🚀 **Contribuições** são sempre bem-vindas! Se você encontrou algum erro ou gostaria de sugerir melhorias, fique à vontade para abrir uma *issue* ou enviar um *pull request*. :)
