@@ -9,18 +9,20 @@
 </h:head>
 <h:body>
     <div class="container">
-        <!-- Título acima da aplicação -->
-        <legend>Gerenciador de Tarefas</legend>
 
         <!-- Botão de alternância entre cadastro e lista -->
         <h:form>
-            <h:commandButton value="Ver lista de tarefas" action="#{tarefaMB.mostrarLista}" />
+            <h1>Gerenciador de Tarefas</h1>
+            <h:panelGroup style="text-align: center;">
+                <h:commandButton id="botaoVerTarefas" value="Ver lista de tarefas" action="#{tarefaMB.mostrarLista}" />
+            </h:panelGroup>
         </h:form>
 
         <!-- Painel de Cadastro -->
         <h:panelGrid columns="3" cellpadding="20px" id="cadastroPanel" rendered="#{!tarefaMB.mostrarLista}">
             <h:form>
                 <h:panelGrid columns="2" styleClass="cadastrar-tarefa">
+
                     <h:outputLabel for="titulo" value="Título:" />
                     <h:inputText id="titulo" value="#{tarefaMB.tarefa.titulo}" required="true" />
 
@@ -51,7 +53,10 @@
                         <f:selectItem itemValue="Concluída" itemLabel="Concluída" />
                     </h:selectOneMenu>
 
-                    <h:commandButton value="Cadastrar" action="#{tarefaMB.salvar}" />
+                    <h:panelGroup style="text-align: center;" colspan="2">
+                        <h:commandButton id="cadastrar" value="Cadastrar" action="#{tarefaMB.salvar}" />
+                    </h:panelGroup>
+
                 </h:panelGrid>
             </h:form>
         </h:panelGrid>
@@ -59,7 +64,9 @@
         <!-- Painel de Lista -->
         <h:panelGroup id="listaPanel" rendered="#{tarefaMB.mostrarLista}">
             <h:form>
-                <h:commandButton value="Voltar ao cadastro de tarefas" action="#{tarefaMB.mostrarCadastro}" />
+                <h:panelGroup style="text-align: center;">
+                    <h:commandButton id="voltarCadastro" value="Voltar ao cadastro de tarefas" action="#{tarefaMB.mostrarCadastro}" />
+                </h:panelGroup>
             </h:form>
             <h:form>
                 <h:dataTable id="listaTarefas" class="table table-striped table-bordered" value="#{tarefaMB.tarefas}" var="tarefa">
@@ -105,13 +112,15 @@
                         <f:facet name="header">
                             <h:outputText value="Ações" />
                         </f:facet>
-                        <h:commandLink action="#{tarefaMB.editar(tarefa)}" title="Editar Tarefa">
-                            <h:graphicImage library="imagens" name="editar.png" width="20px" />
-                        </h:commandLink>
+                        <h:panelGroup style="text-align: center;">
+                            <h:commandLink action="#{tarefaMB.editar(tarefa)}" title="Editar Tarefa">
+                                <h:graphicImage library="imagens" name="editar.png" width="20px" />
+                            </h:commandLink>
 
-                        <h:commandLink action="#{tarefaMB.remover(tarefa.id)}" title="Remover Tarefa">
-                            <h:graphicImage library="imagens" name="excluir.png" width="20px" />
-                        </h:commandLink>
+                            <h:commandLink action="#{tarefaMB.remover(tarefa.id)}" title="Remover Tarefa">
+                                <h:graphicImage library="imagens" name="excluir.png" width="20px" />
+                            </h:commandLink>
+                        </h:panelGroup>
                     </h:column>
                 </h:dataTable>
             </h:form>
