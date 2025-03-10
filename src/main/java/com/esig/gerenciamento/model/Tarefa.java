@@ -10,7 +10,6 @@ public class Tarefa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
     private String descricao;
     private String responsavel;
@@ -75,5 +74,4 @@ public class Tarefa implements Serializable {
     public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
-
 }
