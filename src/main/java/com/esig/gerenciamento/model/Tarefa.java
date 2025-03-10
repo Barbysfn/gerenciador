@@ -10,15 +10,22 @@ public class Tarefa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
     private String titulo;
+
     private String descricao;
-    private String responsavel;
+
+    private Integer responsavel;
+
     private String prioridade;
+
+    @Temporal(TemporalType.DATE)
     private Date deadline;
+
     private String situacao;
 
     // Getters and Setters
-
     public Long getId() {
         return id;
     }
@@ -43,11 +50,11 @@ public class Tarefa implements Serializable {
         this.descricao = descricao;
     }
 
-    public String getResponsavel() {
+    public Integer getResponsavel() {
         return responsavel;
     }
 
-    public void setResponsavel(String responsavel) {
+    public void setResponsavel(Integer responsavel) {
         this.responsavel = responsavel;
     }
 
