@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Montserrat:ital@1&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Krona+One&family=Monomakh&family=Montserrat:ital,wght@0,300;1,300&family=Quicksand:wght@300&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Iansui&family=Josefin+Sans:wght@100..700&family=Krona+One&family=Monomakh&family=Montserrat:ital,wght@0,300;1,300&family=Quicksand:wght@300&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 body {
-    background: url("#{resource['imagens/rm222batch2-mind-03.jpg']}") no-repeat center center fixed;
+    background: url("#{resource['imagens/4964196.jpg']}") no-repeat center center fixed;
     background-opacity: 10%;
     background-size: cover;
     font-family: "Montserrat", sans-serif;
@@ -29,33 +29,50 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .container textarea{
-margin-right: 180px;
+  font-weight: bold;
+   margin-right: 180px;
 }
 
-#j_idt7\:botaoVerTarefas {
+h1{
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+    color: #D3D3D3;
+    letter-spacing: .1em;
+    text-shadow:
+      -1px 1px 1px #C0C0C0,
+      1px 1px 1px #A9A9A9;  /*mais escuro*/
+}
+
+[id*="botaoVerTarefas"] {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border: 1px solid;
     overflow: hidden;
     background-color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px 20px;
-    margin-left: 86px;
+    margin-left: 270px;
     border-radius: 5px;
     transition: all 300ms ease-in-out;
 }
 
-#j_idt7\:botaoVerTarefas:hover {
-  background-color: #7c7c7c;
+[id*="botaoVerTarefas"]:hover {
+  background-color: #00BFFF;
   color: white;
 }
 
 
-#j_idt11\:cadastrar {
+[id*="cadastrartarefa"] {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     margin-top: 20px;
     border: 1px solid;
     overflow: hidden;
@@ -66,13 +83,16 @@ margin-right: 180px;
     transition: all 300ms ease-in-out;
 }
 
-#j_idt11\:cadastrar:hover {
+[id*="cadastrartarefa"]:hover {
   background-color: #38ef7d;
   color: white;
 }
 
-#j_idt28\:voltarCadastro{
-    margin-bottom: 40px;
+[id*="voltarCadastroTarefas"] {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 80px;
     border: none;
     overflow: hidden;
     background-color: #eeeeee;
@@ -82,11 +102,14 @@ margin-right: 180px;
     transition: all 300ms ease-in-out;
 }
 
-#j_idt28\:voltarCadastro:hover {
+
+[id*="voltarCadastroTarefas"]:hover {
   background-color: #38ef7d;
 }
 
-form#j_idt30 {
+[id*="listaTarefas"] {
+  font-weight: bold;
+  font-size: 15px;
   border: 1px solid black;
   border-collapse: collapse;
   background-color: #f5f5f5;
@@ -94,36 +117,39 @@ form#j_idt30 {
   margin-bottom: 20px;
 }
 
-form#j_idt30 th,
-form#j_idt30 td {
-  padding: 8px;
-  text-align: left;
+
+[id*="listaTarefas"] th,
+[id*="listaTarefas"] td {
+  padding: 12px;
+  text-align: center;
 }
 
-form#j_idt30 th {
+[id*="listaTarefas"] th {
   background-color: #333;
   color: #fff;
 }
 
-form#j_idt30 tr:nth-child(even) {
+
+[id*="listaTarefas"] tr:nth-child(even) {
   background-color: #ddd;
 }
 
-form#j_idt30 tr:hover {
+[id*="listaTarefas"] tr:hover {
   background-color: #ccc;
 }
 
 .cadastrar-tarefa label{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500
     margin-right: 30px;
 }
 
-
-#j_idt11\:titulo,
-#j_idt11\:descricao,
-#j_idt11\:responsavel,
-#j_idt11\:deadline,
-#j_idt11\:situacao,
- #j_idt11\:prioridade {
+[id*="titulo"],
+[id*="descricao"],
+[id*="responsavel"],
+[id*="deadline"],
+[id*="situacao"],
+[id*="prioridade"] {
     color: #333;
     width: 100%;
     padding: 10px;
