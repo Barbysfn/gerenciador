@@ -44,23 +44,7 @@ O que o Teste Verifica:
 - A descrição da tarefa é "Descrição da Tarefa".
 
 ✅ **Os testes foram bem-sucedidos, validando os comportamentos esperados nas principais funcionalidades do TarefaService.**
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4d037f39-60b5-4ca1-9878-1382ec10050e" width="390px">
-</div>
-
 
 --------------------------------------
-### ⚠️ **Problemas de Execução**
-
-Realizei o teste de rodar a aplicação pelo Tomcat de duas formas: uma utilizando JDK 21 + Tomcat 10 com a porta 8090 (reformulando o código para a utilização do jakarta) e a outra utilizando a versão 8.1 + Tomcat 9 na porta 8070 (código desse repositório). Em ambas as tentativas o Tomcat inicializou, mas mostrou o erro "HTTP Status 404 – Não Encontrado" ao acessar o localhost do projeto, como mostrado nas imagens abaixo: 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/1973ed43-44b3-41ec-ac0d-e618543674e1" width="520px">
-</div>
-<br>
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/176fb0b4-4a51-415f-80f1-ef3b1ced0b64" width="675px">
-</div>
-
-<br>
 
 🚀 **Contribuições** são sempre bem-vindas! Se você encontrou algum erro ou gostaria de sugerir melhorias, fique à vontade para abrir uma *issue* ou enviar um *pull request*. :)
