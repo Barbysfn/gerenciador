@@ -5,7 +5,9 @@
 Este projeto tem como objetivo o desenvolvimento de um gerenciador de tarefas. A aplicação permite que os usuários criem, editem e excluam tarefas, além de gerenciar seu status de forma simples e eficiente. A solução foi construída utilizando Java, JSF, JPA (Java Persistence API), Hibernate e PostgreSQL.
 
 
-https://github.com/user-attachments/assets/38186089-8849-4e9d-a1d0-9b33b8752651
+
+https://github.com/user-attachments/assets/e6c54c4f-e1b9-4177-884e-ad9894319b59
+
 
 
 -------------------------------------
