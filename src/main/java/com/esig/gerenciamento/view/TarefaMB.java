@@ -42,7 +42,7 @@ public class TarefaMB {
         System.out.println("Responsável (ID): " + tarefa.getResponsavel());
         System.out.println("Prioridade: " + tarefa.getPrioridade());
         System.out.println("Deadline: " + tarefa.getDeadline());
-        System.out.println("Situação: " + tarefa.getSituacao());
+        System.out.println("Status: " + tarefa.getStatus());
 
         if (!prioridadeValida(tarefa.getPrioridade())) {
             throw new IllegalArgumentException("A prioridade fornecida não é válida.");
@@ -56,9 +56,8 @@ public class TarefaMB {
 
         tarefa = new Tarefa();
         tarefas = service.listar();
+        mostrarLista();
     }
-
-
 
     private boolean prioridadeValida(String prioridade) {
         return "Alta".equals(prioridade) || "Média".equals(prioridade) || "Baixa".equals(prioridade) || "Crítica".equals(prioridade);
@@ -66,6 +65,7 @@ public class TarefaMB {
 
     public void editar(Tarefa tarefa) {
         this.tarefa = tarefa;
+        mostrarCadastro();
     }
 
     public void remover(Long id) {
@@ -76,12 +76,11 @@ public class TarefaMB {
     public void concluir(Long id) {
         Tarefa tarefa = service.listar().stream().filter(t -> t.getId().equals(id)).findFirst().orElse(null);
         if (tarefa != null) {
-            tarefa.setSituacao("Concluída");
+            tarefa.setStatus("Concluída");
             service.atualizar(tarefa);
             tarefas = service.listar();
         }
     }
-
 
     public List<Equipe> carregarEquipe() {
         EquipeService equipeService = new EquipeService();
@@ -111,22 +110,6 @@ public class TarefaMB {
 
     public void setEquipe(List<Equipe> equipe) {
         this.equipe = equipe;
-    }
-
-    public String getFiltroTitulo() {
-        return filtroTitulo;
-    }
-
-    public void setFiltroTitulo(String filtroTitulo) {
-        this.filtroTitulo = filtroTitulo;
-    }
-
-    public String getFiltroResponsavel() {
-        return filtroResponsavel;
-    }
-
-    public void setFiltroResponsavel(String filtroResponsavel) {
-        this.filtroResponsavel = filtroResponsavel;
     }
 
     public boolean isMostrarLista() {

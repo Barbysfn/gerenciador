@@ -25,7 +25,7 @@ public class Tarefa implements Serializable {
 
     private String situacao;
 
-    // Getters and Setters
+//getters e setters
     public Long getId() {
         return id;
     }
@@ -82,3 +82,4 @@ public class Tarefa implements Serializable {
         this.situacao = situacao;
     }
 }
+
